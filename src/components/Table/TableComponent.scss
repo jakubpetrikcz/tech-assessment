@@ -1,0 +1,135 @@
+.collapse {
+  display: none;
+}
+
+.collapse.show {
+  display: table-row;
+}
+
+.padding-20 {
+  padding: "20px 0";
+}
+
+@media (max-width: 1300px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  table tbody tr:first-child {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 55%;
+    padding-block: 20px;
+  }
+
+  .collapse td:last-of-type {
+    border-bottom: none;
+  }
+
+  td:before {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 45%;
+    padding-right: 10px;
+    padding-left: 10px;
+    white-space: normal;
+    padding-block: 20px;
+    background: #dee2e6;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .collapse.show,
+  .show {
+    display: block;
+  }
+
+  .collapse {
+    display: block;
+  }
+
+  td:nth-of-type(2):before {
+    content: "Identification number";
+  }
+  td:nth-of-type(3):before {
+    content: "Name";
+  }
+  td:nth-of-type(4):before {
+    content: "Gender";
+  }
+  td:nth-of-type(5):before {
+    content: "Risk";
+  }
+  td:nth-of-type(6):before {
+    content: "Hair length";
+  }
+  td:nth-of-type(7):before {
+    content: "IQ";
+  }
+  td:nth-of-type(8):before {
+    content: "Admission date";
+  }
+  td:nth-of-type(9):before {
+    content: "Last breakdown";
+  }
+  td:nth-of-type(10):before {
+    content: "Yearly fee";
+  }
+  td:nth-of-type(11):before {
+    content: "Knows the Joker?";
+  }
+
+  .relatives-table {
+    td:nth-of-type(1):before {
+      content: "";
+    }
+    td:nth-of-type(2):before {
+      content: "Relative ID";
+    }
+    td:nth-of-type(3):before {
+      content: "Patient ID";
+    }
+    td:nth-of-type(4):before {
+      content: "Is alive?";
+    }
+    td:nth-of-type(5):before {
+      content: "Frequency of visits";
+    }
+  }
+
+  .phone-table {
+    td:nth-of-type(1):before {
+      content: "";
+    }
+    td:nth-of-type(2):before {
+      content: "Phone ID";
+    }
+    td:nth-of-type(3):before {
+      content: "ID of the relative";
+    }
+    td:nth-of-type(4):before {
+      content: "Phone";
+    }
+  }
+}
